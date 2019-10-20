@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio;
+using Entidades;
+
 
 namespace Practicando02
 {
-    public partial class Form1 : Form
+    public partial class AlumnoListado : Form
     {
-        public Form1()
+        public AlumnoListado()
         {
             InitializeComponent();
+            CargarGrilla();
+        }
+        public void CargarGrilla()
+        {
+            
+            dgvListado.DataSource = Curso.RecuperarAlumnos();
         }
     }
 }
